@@ -1,0 +1,20 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          authing:
+            client-id: 6389e736d3c2d4fde08a1d18
+            client-secret: 134f80fb9d1b3d1d64872257071ac24e
+            redirect-uri: http://localhost:8080/callback
+            client-authentication-method: post
+            authorization-grant-type: authorization_code
+            scope:
+              - openid
+              - profile
+              - email
+              - aws.cognito.signin.user.admin
+        provider:
+          authing:
+            issuer-uri: https://saml-dev.authing.cn/oidc
+            user-name-attribute: preferred_username
